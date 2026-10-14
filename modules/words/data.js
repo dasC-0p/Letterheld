@@ -1,0 +1,3 @@
+const raw=[['aap','AAP','🐵'],['bal','BAL','⚽'],['bus','BUS','🚌'],['kat','KAT','🐱'],['vis','VIS','🐟'],['zon','ZON','☀️'],['beer','BEER','🐻'],['boot','BOOT','⛵'],['eend','EEND','🦆'],['huis','HUIS','🏠'],['maan','MAAN','🌙'],['muis','MUIS','🐭'],['roos','ROOS','🌹'],['trein','TREIN','🚂'],['appel','APPEL','🍎'],['fiets','FIETS','🚲'],['hond','HOND','🐶'],['paard','PAARD','🐴'],['slang','SLANG','🐍'],['wolk','WOLK','☁️']];
+export const WORDS=raw.map(([id,text,illustration])=>({id,text,language:'nl-BE',length:text.length,phonemes:[],tags:['baseline'],start:text[0],end:text.at(-1),illustration,learningGoals:['technical.word.recognition']}));
+export const wordsByLength=length=>WORDS.filter(w=>w.length===Number(length));

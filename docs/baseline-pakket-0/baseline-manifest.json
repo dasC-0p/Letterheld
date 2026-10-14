@@ -1,0 +1,120 @@
+{
+  "package": {
+    "number": 0,
+    "title": "Baseline en regressiechecklist",
+    "date": "2026-10-14"
+  },
+  "baseline": {
+    "file": "index 7.html",
+    "source_status": "door gebruiker bevestigd als actuele baseline",
+    "application_modified": false,
+    "copy_in_bundle": false,
+    "copy_note": "De aangeleverde bron was via enterprise documentweergave leesbaar, maar niet als bestand beschikbaar in de uitvoersandbox. Gebruik het oorspronkelijk aangeleverde bestand als bronartefact."
+  },
+  "sources": [
+    "Letterheld_ontwikkelplan.docx (versie 1.0, 14 oktober 2026)",
+    "Letterheld_ontwikkelinstructies.docx (14 oktober 2026)",
+    "index 7.html"
+  ],
+  "counts": {
+    "registered_screens": 16,
+    "ui_reachable_app_screens": 14,
+    "home_modules": 4,
+    "onboarding_symbols": 8,
+    "letters": 26,
+    "words": 20,
+    "word_lengths": {
+      "3": 6,
+      "4": 9,
+      "5": 5
+    },
+    "sound_words_3_or_4": 15,
+    "rewards": 6,
+    "persistent_keys": 4
+  },
+  "persistent_keys": [
+    {
+      "key": "name",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "key": "symbol",
+      "type": "JSON array [emoji,label]",
+      "default": "null"
+    },
+    {
+      "key": "stars",
+      "type": "numeric string read with unary +",
+      "default": "0"
+    },
+    {
+      "key": "owned",
+      "type": "JSON array of reward indices",
+      "default": "[]"
+    }
+  ],
+  "temporary_storage_probe": "_x (set to '1' and immediately removed)",
+  "speech": {
+    "api": "Web Speech API",
+    "locale": "nl-BE",
+    "normal_rate": 0.88,
+    "slow_rate": 0.68,
+    "cancels_previous": true,
+    "missing_api": "silent no-op"
+  },
+  "automated_logic_checks": [
+    {
+      "test": "woordpool_3",
+      "status": "PASS",
+      "detail": "6 unieke woorden: AAP, BAL, BUS, KAT, VIS, ZON"
+    },
+    {
+      "test": "woordpool_4",
+      "status": "PASS",
+      "detail": "9 unieke woorden: BEER, BOOT, EEND, HUIS, MAAN, MUIS, ROOS, HOND, WOLK"
+    },
+    {
+      "test": "woordpool_5",
+      "status": "PASS",
+      "detail": "5 unieke woorden: TREIN, APPEL, FIETS, PAARD, SLANG"
+    },
+    {
+      "test": "rekengenerator_1000_rondes",
+      "status": "PASS",
+      "detail": "alle uitkomsten liggen tussen 0 en 10; aftrekkingen blijven niet-negatief"
+    },
+    {
+      "test": "cijferluisteren_cyclus",
+      "status": "PASS",
+      "detail": "cyclus: [2, 5, 8, 0, 3, 6, 9, 1, 4, 7, 10]"
+    },
+    {
+      "test": "soundFind_afleiders",
+      "status": "PASS",
+      "detail": "minimum 10 geldige afleiders; zwakste geval ('VIS', 'S')"
+    },
+    {
+      "test": "soundStart_afleiders",
+      "status": "PASS",
+      "detail": "minimum 11 geldige afleiders; zwakste geval ('BAL', 'B')"
+    }
+  ],
+  "runtime_test_status": {
+    "node_syntax": "NOT RUN - exact attached source not mounted as file",
+    "browser_console": "NOT RUN - no browser binary in sandbox",
+    "mobile_viewport": "STATIC AUDIT ONLY - no browser binary"
+  },
+  "git": {
+    "commit_executed": false,
+    "tag_executed": false,
+    "commit_message": "docs: establish standalone baseline",
+    "tag": "v0.1-standalone-baseline"
+  },
+  "scope": {
+    "new_functionality": false,
+    "new_dependencies": false,
+    "framework_added": false,
+    "package_1_started": false
+  }
+}

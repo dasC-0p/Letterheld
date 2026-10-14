@@ -1,0 +1,22 @@
+Letterheld — Pakket 0 Git-instructies
+
+Status in deze omgeving:
+- commit NIET uitgevoerd
+- tag NIET uitgevoerd
+- reden: geen toegang tot de projectrepository / geen gemounte werkboom
+
+Uit te voeren in de echte repository:
+
+mkdir -p docs
+# Plaats de drie Pakket-0-documenten in docs/.
+git add docs/pakket-0-baseline-en-regressiechecklist.md docs/baseline-manifest.json docs/git-commit-en-tag.txt
+git commit -m "docs: establish standalone baseline"
+git tag -a v0.1-standalone-baseline -m "Letterheld standalone baseline"
+
+Verificatie:
+git status --short
+git show --stat --oneline HEAD
+git show --stat --oneline v0.1-standalone-baseline
+git tag --list "v0.1-standalone-baseline"
+
+Pakket 1 niet starten in deze commit.

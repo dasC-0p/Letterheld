@@ -1,0 +1,3 @@
+import {uniqueOptions} from '../../js/ui.js';
+export function mathQuestion(round,{mathMax=10,operator='mixed',visual=true,answerChoices=4}={},rng=Math.random){const op=operator==='mixed'?(round%2===0?'+':'-'):operator;let a=(round*3+2)%(mathMax+1),b=(round*2+1)%(mathMax+1);if(op==='+'&&a+b>mathMax)b=Math.max(0,mathMax-a);if(op==='-'&&b>a)[a,b]=[b,a];const result=op==='+'?a+b:a-b;return{a,b,operator:op,result,visual,options:uniqueOptions(result,Array.from({length:mathMax+1},(_,i)=>i),answerChoices,rng)}}
+export function togetherQuestion(round,max=10){const a=1+(round*2)%Math.max(1,max-1),b=1+(round*3)%Math.max(1,max-a);return{groupA:a,groupB:b,assetA:'🍎',assetB:'⭐',total:a+b}}

@@ -1,0 +1,23 @@
+{
+  "name": "Letterheld",
+  "short_name": "Letterheld",
+  "description": "Spelenderwijs leren met letters, cijfers, rekenen, woorden en klanken.",
+  "lang": "nl-BE",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#def4ff",
+  "theme_color": "#168bd0",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Letterheld bronreferentie
+
+Actuele baseline: index 7.html
+Bevestigd door de gebruiker op 14 oktober 2026.
+Dit pakket wijzigt of reconstrueert de bron niet. Gebruik het oorspronkelijk aangeleverde bestand als bronartefact.
+Reden: de enterpriseweergave stelde de inhoud leesbaar beschikbaar, maar mountte de attachment niet als fysiek bestand in de uitvoersandbox.

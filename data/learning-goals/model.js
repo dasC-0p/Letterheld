@@ -1,0 +1,2 @@
+export const learningGoals=[{id:'technical.word.recognition',domain:'language',status:'technical-placeholder',validatedMapping:false,description:'Technische koppeling voor woordherkenning; geen formele leeftijds- of leerplanmapping.'}];
+export function selectContentByGoals(content,goalIds=[]){if(!goalIds.length)return content;return content.filter(item=>(item.learningGoals||[]).some(id=>goalIds.includes(id)))}

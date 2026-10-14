@@ -1,0 +1,3 @@
+import {uniqueOptions} from '../../js/ui.js';
+export function productQuestion(round,{maxFactor=5,answerChoices=4}={},rng=Math.random){const groups=2+(round%Math.max(1,maxFactor-1)),size=1+((round*3)%maxFactor),result=groups*size;return{groups,size,result,options:uniqueOptions(result,Array.from({length:maxFactor*maxFactor+1},(_,i)=>i),answerChoices,rng)}}
+export function divisionQuestion(round,{maxFactor=5,answerChoices=4}={},rng=Math.random){const divisor=2+(round%Math.max(1,maxFactor-1)),quotient=1+((round*3)%maxFactor),dividend=divisor*quotient;return{dividend,divisor,quotient,options:uniqueOptions(quotient,Array.from({length:maxFactor+1},(_,i)=>i),answerChoices,rng)}}
